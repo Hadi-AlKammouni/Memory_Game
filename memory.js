@@ -88,4 +88,9 @@ function startGame(){
           red_box.onclick=function() {decision()}  
         break;
     }
+
+    // A function called upon clicking on a box taking a parameter that decide what to be done
+    function decision(game_state){
+    
+    }    
 }    

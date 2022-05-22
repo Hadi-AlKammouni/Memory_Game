@@ -1,0 +1,35 @@
+#body{
+    background-color: rgb(0, 106, 255);
+}
+
+#start{
+    text-align: center;
+    font-size: 300%;
+    margin-bottom: 5%;
+}
+
+#section_one, #section_two{
+    display: flex;
+    justify-content: center;
+}
+
+#section_one>div, #section_two>div{
+    margin: 30px;
+    padding: 70px;
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 20px; 
+}
+
+.green_box{
+    background-color: green;
+}
+.red_box{
+    background-color: red;
+}
+.yellow_box{
+    background-color: yellow;
+}
+.blue_box{
+    background-color: blue;
+}

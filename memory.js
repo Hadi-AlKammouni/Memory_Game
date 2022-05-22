@@ -11,3 +11,9 @@ let red_box = document.getElementsByClassName("top_boxes")[1];
 let yellow_box = document.getElementsByClassName("bottom_boxes")[0];
 let blue_box = document.getElementsByClassName("bottom_boxes")[1];
 let body = document.getElementById("body");
+
+// Declaring an array containing the four audios of the colors
+const myArray = [green_audio, red_audio, yellow_audio, blue_audio];
+
+// Declaring the variable level to track the level of the user
+let level =1;

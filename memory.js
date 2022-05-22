@@ -25,5 +25,8 @@ function startGame(){
 
     // To only have the option to click on the boxes
     body.removeEventListener("keypress",startGame)
-    
+
+    // Selecting a random audio each time the game starts
+    let random_sound=myArray[Math.floor(Math.random() * myArray.length)]
+    random_sound.play()
 }    

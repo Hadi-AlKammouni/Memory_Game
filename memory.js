@@ -91,6 +91,23 @@ function startGame(){
 
     // A function called upon clicking on a box taking a parameter that decide what to be done
     function decision(game_state){
-    
+        if (game_state == "green"){
+            // Upon clicking the green box:
+            // The background color changes into grey for only 0.2s
+            // The audio that corresponds to the green color will play
+            // The level increases by one
+            // The startGame function is recalled
+            level+=1 
+            green_box.style.backgroundColor="grey"
+            green_audio.play()
+            setTimeout(returnGreenColor,200) // The function returnGreenColor is called after a delay 0.2s to return the green color
+            function returnGreenColor(){
+                green_box.style.backgroundColor="green"
+            }
+            setTimeout(continuePlaying,1000)
+            function continuePlaying(){
+                startGame()
+            }
+        }
     }    
 }    

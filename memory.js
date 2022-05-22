@@ -109,5 +109,24 @@ function startGame(){
                 startGame()
             }
         }
+
+        else if (game_state == "red"){
+            // Upon clicking the red box:
+            // The background color changes into grey for only 0.2s
+            // The audio that corresponds to the red color will play
+            // The level increases by one
+            // The startGame function is recalled
+            level+=1
+            red_box.style.backgroundColor="grey"
+            red_audio.play()
+            setTimeout(returnRedColor,200) // The function returnRedColor is called after a delay 0.2s to return the red color
+            function returnRedColor(){
+                red_box.style.backgroundColor="red"
+            }
+            setTimeout(continuePlaying,1000)
+            function continuePlaying(){
+                startGame()
+            }  
+        }
     }    
 }    

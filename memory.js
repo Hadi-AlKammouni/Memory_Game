@@ -166,5 +166,17 @@ function startGame(){
                 startGame()
             }
         }
+
+        else {
+            body.style.backgroundColor="red"
+            document.getElementById("start").innerHTML="Game Over ! Press any key on your keyboard to restart"
+            wrong_audio.play()
+            setTimeout(returnBodyColor,200) // The function returnBodyColor is called after a delay 0.2s to return the body color to its initial one
+            function returnBodyColor(){
+                body.style.backgroundColor="rgb(0, 106, 255)"
+            }
+            body.addEventListener("keypress",startGame)
+            level=1
+        }
     }    
 }    

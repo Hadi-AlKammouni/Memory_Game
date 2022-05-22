@@ -23,4 +23,7 @@ body.addEventListener("keypress",startGame)
 
 function startGame(){
 
+    // To only have the option to click on the boxes
+    body.removeEventListener("keypress",startGame)
+    
 }    

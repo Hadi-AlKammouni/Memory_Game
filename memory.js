@@ -17,3 +17,10 @@ const myArray = [green_audio, red_audio, yellow_audio, blue_audio];
 
 // Declaring the variable level to track the level of the user
 let level =1;
+
+// User must click on any key on the keyboard to start the game
+body.addEventListener("keypress",startGame)
+
+function startGame(){
+
+}    

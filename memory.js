@@ -40,6 +40,10 @@ function startGame(){
             green_box.style.visibility="visible"
           }
           document.getElementById("start").innerHTML=`level ${level}`
+          green_box.onclick=function() {decision("green")}
+          red_box.onclick=function() {decision()}
+          yellow_box.onclick=function() {decision()}
+          blue_box.onclick=function() {decision()}
         break;
 
         case red_audio:
@@ -49,7 +53,11 @@ function startGame(){
           function returnRedVisible(){
             red_box.style.visibility="visible"
           }
-          document.getElementById("start").innerHTML=`level ${level}`   
+          document.getElementById("start").innerHTML=`level ${level}`
+          red_box.onclick=function() {decision("red")}
+          green_box.onclick=function() {decision()}
+          yellow_box.onclick=function() {decision()}
+          blue_box.onclick=function() {decision()}   
         break;
 
         case yellow_audio:
@@ -59,7 +67,11 @@ function startGame(){
           function returnYellowVisible(){
             yellow_box.style.visibility="visible"
           }
-          document.getElementById("start").innerHTML=`level ${level}`     
+          document.getElementById("start").innerHTML=`level ${level}`
+          yellow_box.onclick=function() {decision("yellow")}
+          green_box.onclick=function() {decision()}
+          red_box.onclick=function() {decision()}
+          blue_box.onclick=function() {decision()}     
         break;  
 
         case blue_audio:
@@ -69,7 +81,11 @@ function startGame(){
           function returnBlueVisible(){
             blue_box.style.visibility="visible"
           }
-          document.getElementById("start").innerHTML=`level ${level}`  
+          document.getElementById("start").innerHTML=`level ${level}`
+          blue_box.onclick=function() {decision("blue")}
+          green_box.onclick=function() {decision()}
+          yellow_box.onclick=function() {decision()}
+          red_box.onclick=function() {decision()}  
         break;
     }
 }    

@@ -29,4 +29,43 @@ function startGame(){
     // Selecting a random audio each time the game starts
     let random_sound=myArray[Math.floor(Math.random() * myArray.length)]
     random_sound.play()
+
+    switch(random_sound) {
+
+        case green_audio:
+          // To fade the required box  
+          green_box.style.visibility="hidden" 
+          setTimeout(returnGreenVisible,200) // The function returnVisible is called after a delay 0.2s to return the box into visible state
+          function returnGreenVisible(){
+            green_box.style.visibility="visible"
+          }
+        break;
+
+        case red_audio:
+          // To fade the required box  
+          red_box.style.visibility="hidden" 
+          setTimeout(returnRedVisible,200) // The function returnVisible is called after a delay 0.2s to return the box into visible state
+          function returnRedVisible(){
+            red_box.style.visibility="visible"
+          }   
+        break;
+
+        case yellow_audio:
+          // To fade the required box  
+          yellow_box.style.visibility="hidden" 
+          setTimeout(returnYellowVisible,200) // The function returnVisible is called after a delay 0.2s to return the box into visible state
+          function returnYellowVisible(){
+            yellow_box.style.visibility="visible"
+          }     
+        break;  
+
+        case blue_audio:
+          // To fade the required box  
+          blue_box.style.visibility="hidden" 
+          setTimeout(returnBlueVisible,200) // The function returnVisible is called after a delay 0.2s to return the box into visible state
+          function returnBlueVisible(){
+            blue_box.style.visibility="visible"
+          }  
+        break;
+    }
 }    

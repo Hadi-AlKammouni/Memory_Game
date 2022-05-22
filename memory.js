@@ -128,5 +128,24 @@ function startGame(){
                 startGame()
             }  
         }
+
+        else if (game_state == "yellow"){ 
+            // Upon clicking the yellow box:
+            // The background color changes into grey for only 0.2s
+            // The audio that corresponds to the yellow color will play
+            // The level increases by one
+            // The startGame function is recalled
+            level+=1
+            yellow_box.style.backgroundColor="grey"
+            yellow_audio.play()
+            setTimeout(returnYellowColor,200) // The function returnYellowColor is called after a delay 0.2s to return the yellow color
+            function returnYellowColor(){
+                yellow_box.style.backgroundColor="yellow"
+            }
+            setTimeout(continuePlaying,1000)
+            function continuePlaying(){
+                startGame()
+            }
+        }
     }    
 }    

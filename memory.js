@@ -147,5 +147,24 @@ function startGame(){
                 startGame()
             }
         }
+
+        else if (game_state == "blue"){
+            // Upon clicking the blue box:
+            // The background color changes into grey for only 0.2s
+            // The audio that corresponds to the blue color will play
+            // The level increases by one
+            // The startGame function is recalled
+            level+=1
+            blue_box.style.backgroundColor="grey"
+            blue_audio.play()
+            setTimeout(returnBlueColor,200) // The function returnBlueColor is called after a delay 0.2s to return the blue color
+            function returnBlueColor(){
+                blue_box.style.backgroundColor="blue"
+            }
+            setTimeout(continuePlaying,1000)
+            function continuePlaying(){
+                startGame()
+            }
+        }
     }    
 }    

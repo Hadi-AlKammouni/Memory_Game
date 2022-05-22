@@ -39,6 +39,7 @@ function startGame(){
           function returnGreenVisible(){
             green_box.style.visibility="visible"
           }
+          document.getElementById("start").innerHTML=`level ${level}`
         break;
 
         case red_audio:
@@ -47,7 +48,8 @@ function startGame(){
           setTimeout(returnRedVisible,200) // The function returnVisible is called after a delay 0.2s to return the box into visible state
           function returnRedVisible(){
             red_box.style.visibility="visible"
-          }   
+          }
+          document.getElementById("start").innerHTML=`level ${level}`   
         break;
 
         case yellow_audio:
@@ -56,7 +58,8 @@ function startGame(){
           setTimeout(returnYellowVisible,200) // The function returnVisible is called after a delay 0.2s to return the box into visible state
           function returnYellowVisible(){
             yellow_box.style.visibility="visible"
-          }     
+          }
+          document.getElementById("start").innerHTML=`level ${level}`     
         break;  
 
         case blue_audio:
@@ -65,7 +68,8 @@ function startGame(){
           setTimeout(returnBlueVisible,200) // The function returnVisible is called after a delay 0.2s to return the box into visible state
           function returnBlueVisible(){
             blue_box.style.visibility="visible"
-          }  
+          }
+          document.getElementById("start").innerHTML=`level ${level}`  
         break;
     }
 }    
